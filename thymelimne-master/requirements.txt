@@ -1,0 +1,20 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+numpy
+pandas
+flask
+flask_bootstrap
+flask_wtf
+email_validator
+flask_sqlalchemy
+flask_login
+webcolors
+colorthief
+opencv-python
+matplotlib
+scipy
+bs4
+gunicorn
+flask_mail
+flask_bcrypt

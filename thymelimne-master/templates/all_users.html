@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="static/lazystyles.css"><br></br>
+
+<h1>All users in the system</h1>
+{% for user in users %}
+	<br>
+		<p>{{ user.id}} </p>
+		<p>{{ user.username }}</p>
+		<p>{{ user.email }}</p>
+		<p>{{ user.password }}</p>
+	</br>
+{% endfor %}

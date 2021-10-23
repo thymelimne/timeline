@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Edit 
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='signin.css')}}">
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+    <div class="container">
+
+      <form class="form-edit_artifact" method="POST" action="/edit_artifact">
+        <h2 class="form-signin-heading">Edit an artifact. </h2>
+        {{ form.hidden_tag() }}
+		{{ wtf.form_field(form.description) }}
+		{{ wtf.form_field(form.url) }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Edit the artifact</button>
+      </form>
+
+    </div> <!-- /container -->
+{% endblock %}

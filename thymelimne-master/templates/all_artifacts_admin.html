@@ -1,0 +1,9 @@
+<link rel="stylesheet" type="text/css" href="static/lazystyles.css"><br></br>
+
+<h1>All artifacts in the system</h1>
+{% for artifact in artifacts %}
+	<br>
+		<p>{{ artifact.aid }}</p>
+		<p>{{ artifact.title }}</p>
+	</br>
+{% endfor %}

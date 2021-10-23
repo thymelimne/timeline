@@ -1,0 +1,9 @@
+<link rel="stylesheet" type="text/css" href="static/lazystyles.css"><br></br>
+
+<h1>All topics in the system</h1>
+{% for topic in topics %}
+	<br>
+		<p>{{ topic.tid }}</p>
+		<p>{{ topic.title }}</p>
+	</br>
+{% endfor %}

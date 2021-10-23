@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="static/lazystyles.css"><br></br>
+
+
+
+{% if current_user.is_authenticated %}
+	<h1>Welcome, {{name}}</h1>
+	<p><a href={{url_for('create_topic')}}>Create a topic.</a></p>
+	<p><a href={{url_for('create_artifacts')}}>Create a single artifact.</a></p>
+	<p><a href={{url_for('logout')}}>Logout</a></p>
+{% else %}
+	<p>You're not currently logged in; you're gonna have to login to create things on this website.</p>
+	<p><a href={{url_for('login')}}>LOGIN to create things</a></p>
+	<p><a href={{url_for('signup')}}>(But, SIGN UP if you don't have an account yet)</a></p>
+	<p><a href={{url_for('reset_request')}}>((If you've forgotten your password, you can reset it via email.))</a></p>
+{% endif %}
+<br></br>
+<p><a href={{url_for('timelines')}}>Click here to go back to the site's main page.</a></p>
